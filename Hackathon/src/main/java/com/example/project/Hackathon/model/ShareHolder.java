@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Entity
 public class ShareHolder {
 
-	int Id;
+	int shareHolderId;
 	String name;
 	Date dateOfBirth;
 	float fundBalance;
@@ -30,10 +30,10 @@ public class ShareHolder {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int getId() {
-		return Id;
+		return shareHolderId;
 	}
 	public void setId(int id) {
-		Id = id;
+		shareHolderId = id;
 	}
 	
 	@Column(length=100)
@@ -111,7 +111,7 @@ public class ShareHolder {
 	
 	@Override
 	public String toString() {
-		return "ShareHolder [Id=" + Id + ", name=" + name + ", dateOfBirth=" + dateOfBirth + ", fundBalance="
+		return "ShareHolder [shareHolderId=" + shareHolderId + ", name=" + name + ", dateOfBirth=" + dateOfBirth + ", fundBalance="
 				+ fundBalance + ", invested=" + invested + ", profit=" + profit + ", loss=" + loss
 				+ ", lastUpdatedTime=" + lastUpdatedTime + ", lastUser=" + lastUser + ", stockList=" + stockList + "]";
 	}
