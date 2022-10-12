@@ -1,5 +1,8 @@
 package com.example.project.Hackathon.service;
 
-public interface ShareHolderService {
+import com.example.project.Hackathon.model.ShareHolder;
 
+public interface ShareHolderService {
+	
+	ShareHolder getShareHolderAndStocks(int shareHolderId,int effDate,int endDate);
 }
